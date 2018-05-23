@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2>Liste des cd</h2>
-
-    <a href="{% url "afficher_detail" 2 %}">
-        Lien vers le cd N° 2
-    </a>
+    {% for musique in liste_musiques %}
+    <div class="musique">
+        <h3>{{ musique.titre }}</h3>
+        <p>{{ musique.autheur }}</p>
+        <p><a href="{% url 'afficher_detail' musique.id %}">Voir le detail</a></p>
+    </div>
+    {% empty %}
+    <p>Aucune musique</p>
+    {% endfor %}
 {% endblock %}
