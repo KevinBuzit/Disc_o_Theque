@@ -67,8 +67,12 @@ WSGI_APPLICATION = 'Disc_o_Theque.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'bndjlk2vo',
+        'USER': 'u3jeo3zfzx4hlw7g',
+        'PASSWORD': 'nG0bx88hJfYpWjfRiEi',        
+        'HOST': 'bndjlk2vo-mysql.services.clever-cloud.com',
+        'PORT': '3306', 
     }
 }
 
